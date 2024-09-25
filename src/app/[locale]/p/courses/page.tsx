@@ -14,7 +14,7 @@ export default function Courses() {
 
       {list.map((course, index) =>
           <section key={index} id={course.id}>
-            <Course course={course} key={index} />
+            <Course course={course} />
           </section>
       )}
 

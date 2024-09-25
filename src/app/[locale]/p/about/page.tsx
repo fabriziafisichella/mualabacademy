@@ -1,6 +1,5 @@
 import { School } from "@/components/elements/School";
 import { Teachers } from "@/components/elements/Teachers";
-import { BlurIn } from "@/components/ui/texteffects/blurin";
 import { TextFade } from "@/components/ui/texteffects/fade";
 
 

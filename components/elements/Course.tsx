@@ -49,19 +49,5 @@ export function Course({ course }: CourseProps) {
             </div>
 
         </TextFade>
-
-
-        /* 
-                        <p>{course.modules}</p>
-                        <hr />
-                        <p>{course.starting}</p>
-                        <p>button open</p>
-                    </div> 
-        
-                    <div>
-        
-                    </div>
-        
-                </div > */
     )
 }

@@ -31,8 +31,8 @@ export function Teachers() {
                     <Carousel>
                         <CarouselContent className="w-full max-sm:w-72 h-96">
                             {list.map((teacher, index) =>
-                                <CarouselItem className="cursor-pointer transition-all duration-500 hover:scale-105 md:basis-1/2 lg:basis-1/3 w-52 flex justify-center items-center">
-                                    <TeachersCard details={teacher} key={index} />
+                                <CarouselItem key={index} className="cursor-pointer transition-all duration-500 hover:scale-105 md:basis-1/2 lg:basis-1/3 w-52 flex justify-center items-center">
+                                    <TeachersCard details={teacher}  />
                                 </CarouselItem>
                             )}
                         </CarouselContent>
