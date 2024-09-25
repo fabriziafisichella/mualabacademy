@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -ms-overflow-style: none; /* Hides ScrollBar in Internet Explorer 10+ */
+  scrollbar-width: none; /* Hides Scrollbar in Firefox and Opera */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Hides ScrollBar in Safari and Chrome */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  background-color: #fff;
+  color: #fff;
+}
+
+main {
+  height: calc(100dvh - 120px);
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  box-sizing: border-box; 
+}
+
+section {
+  height: calc(100dvh - 120px);
+  scroll-snap-align: start;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Major Mono Display", monospace;
+  font-size: 32px;
+  font-weight: 400;
+  text-transform: lowercase;
+  color: #7e9181;
+}
+
+h2 {
+  font-family: 'Major Mono Display', monospace;
+  font-size: 16px;
+  margin-top: 5px;
+  text-align: center;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+h3 {
+  font-family: 'Major Mono Display', monospace;
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+  text-transform: lowercase;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #00000049;
+  margin-block: 1em;
+}
+
+p, div {
+  font-size: 16px;
+  color: #333333;
+}
+
+#cardSubtitle {
+  font-family: 'Major Mono Display', monospace;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: 600;
+  color: #7e9181;
+  text-transform: lowercase;
+}

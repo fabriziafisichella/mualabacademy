@@ -1,0 +1,19 @@
+{
+    "Hero": {
+      "academy": "Accademia di Make-Up",
+      "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+      "button1": "Corsi",
+      "button2": "Masterclass",
+      "reviews": "Dicono di noi",
+      "reviewsDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt!"
+    },
+    "About": {
+      "school": "La scuola",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt!",
+      "teachers": "I docenti",
+          "teachersDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt!"
+    },
+    "Courses": {
+      
+    }
+  }
