@@ -80,6 +80,7 @@ hr {
 p, div {
   font-size: 16px;
   color: #333333;
+  white-space: pre-line;
 }
 
 #cardSubtitle {

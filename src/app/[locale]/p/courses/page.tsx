@@ -1,27 +1,23 @@
 
+import { Course } from "@/components/elements/Course";
+import { CoursesEN, CoursesIT } from "../../utils/coursesList";
+import { useLocale } from "next-intl";
 
 export default function Courses() {
 
-    return (
-      <div className="text-black">
-        
-        <section id="one">
-          Mensile
-        </section>
+  const locale = useLocale();
+  const list = (locale === "it" ? CoursesIT : CoursesEN);
 
-        <section id="tree">
-          Trimestrale
-        </section>
+  return (
 
-        <section id="six">
-          Semestrale
-        </section>
+    <div className="text-black">
 
-        <section id="nine">
-          Annuale
-        </section>
-        
-      </div>
-    );
-  }
-  
+      {list.map((course, index) =>
+          <section key={index} id={course.id}>
+            <Course course={course} key={index} />
+          </section>
+      )}
+
+    </div>
+  );
+}

@@ -14,6 +14,7 @@
     "teachersDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt!"
   },
   "Courses": {
-      
+    "open": "Contact us",
+      "closed": "Next opening"
   }
 }
