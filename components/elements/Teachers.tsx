@@ -25,22 +25,21 @@ export function Teachers() {
                 <Title title={t("teachers")} description={t("teachersDescription")} />
             </TextFade>
 
-
-            <ul className="flex justify-center items-center w-full sm:scale-125 sm:mt-32">
-                <TextFade direction="up" delay="0.5">
-                    <Carousel>
-                        <CarouselContent className="w-full max-sm:w-72 h-96">
+            <TextFade direction="up" delay="0.5">
+                <ul className="flex justify-center items-center w-screen sm:scale-125 sm:mt-32">
+                    <Carousel className="sm:w-[60%]">
+                        <CarouselContent className="max-sm:w-72 h-96">
                             {list.map((teacher, index) =>
                                 <CarouselItem key={index} className="cursor-pointer transition-all duration-500 hover:scale-105 md:basis-1/2 lg:basis-1/3 w-52 flex justify-center items-center">
-                                    <TeachersCard details={teacher}  />
+                                    <TeachersCard details={teacher} />
                                 </CarouselItem>
                             )}
                         </CarouselContent>
                         <CarouselPrevious />
                         <CarouselNext />
                     </Carousel>
-                </TextFade>
-            </ul>
+
+                </ul></TextFade>
         </div>
     )
 }

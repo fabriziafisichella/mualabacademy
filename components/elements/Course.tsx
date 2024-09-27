@@ -2,6 +2,7 @@ import { Button } from "../ui/button"
 import { TextFade } from "../ui/texteffects/fade"
 import { Title } from "../ui/Title"
 import { useTranslations } from "next-intl"
+import {useLocale} from "next-intl"
 
 interface CourseProps {
     course: {
@@ -20,6 +21,7 @@ interface CourseProps {
 export function Course({ course }: CourseProps) {
 
     const t = useTranslations("Courses");
+    const locale = useLocale();
 
     return (
 
@@ -42,7 +44,14 @@ export function Course({ course }: CourseProps) {
                             {course.modules}
                         </h3>
 
-                        {course.open ? <Button className="uppercase">{t("open")}</Button> : <h2>{t("closed")} <br /> {course.starting}</h2>}
+                        {course.open
+                            ? <Button className="uppercase">
+                                <a href={`/${locale}/p/contacts`}>
+                                    {t("open")}
+                                </a>
+                            </Button>
+                            : <h2>{t("closed")} <br /> {course.starting}</h2>
+                        }
                     </div>
                 </div>
 

@@ -1,13 +1,17 @@
 
+import { GalleryComponent } from "@/components/elements/Gallery";
+import { useTranslations } from "next-intl";
+
 
 export default function Gallery() {
-    return (
-      <div className="text-black">
-        <section >
-          Pagina galleria. <br />
-          Marquee sotto, anteprima sopra.
-        </section>
-      </div>
-    );
-  }
-  
+  const t = useTranslations("Gallery");
+  return (
+    <div className="text-black">
+      <section>
+
+        <GalleryComponent title={t("title")} description={t("description")} />
+
+      </section>
+    </div>
+  );
+}

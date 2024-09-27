@@ -91,3 +91,15 @@ p, div {
   color: #7e9181;
   text-transform: lowercase;
 }
+
+
+@media (max-width: 640px) {
+  #mobileFix { display: flex;
+  flex-direction: column; }
+  #desktopFix { display: none; }
+}
+
+@media (min-width: 641px) {
+  #mobileFix { display: none; }
+  #desktopFix { display: flex; }
+}

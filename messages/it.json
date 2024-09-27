@@ -1,20 +1,40 @@
 {
-    "Hero": {
-      "academy": "Accademia di Make-Up",
-      "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
-      "button1": "Corsi",
-      "button2": "Masterclass",
-      "reviews": "Dicono di noi",
-      "reviewsDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt!"
-    },
-    "About": {
-      "school": "La scuola",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt!",
-      "teachers": "I docenti",
-          "teachersDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt!"
-    },
-    "Courses": {
-      "open": "Richiedi informazioni",
-      "closed": "Prossima apertura"
-    }
+  "Hero": {
+    "academy": "Accademia di Make-Up",
+    "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+    "button1": "Corsi",
+    "button2": "Masterclass",
+    "reviews": "Dicono di noi",
+    "reviewsDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt!"
+  },
+  "About": {
+    "school": "La scuola",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt!",
+    "teachers": "I docenti",
+    "teachersDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt!"
+  },
+  "Courses": {
+    "open": "Richiedi informazioni",
+    "closed": "Prossima apertura"
+  },
+  "Masterclass": {
+    "open": "Contact us",
+    "closed": "Next opening"
+  },
+  "Gallery": {
+    "title": "Galleria",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt!"
+  },
+  "ContactInfo": {
+    "title": "Dove trovarci",
+    "follow": "Seguici"
+  },
+  "ContactForm": {
+    "title": "Contattaci",
+    "name": "Il tuo nome",
+    "email": "La tua mail",
+    "message": "Il tuo messaggio",
+    "messageForm": "Messaggio",
+    "button": "Invia"
   }
+}

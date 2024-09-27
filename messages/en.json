@@ -1,11 +1,11 @@
 {
   "Hero": {
     "academy": "Make-Up Academy",
-          "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
-          "button1": "Courses",
-          "button2": "Masterclasses",
-          "reviews": "Opinions",
-          "reviewsDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt!"
+    "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+    "button1": "Courses",
+    "button2": "Masterclasses",
+    "reviews": "Opinions",
+    "reviewsDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt!"
   },
   "About": {
     "school": "Our school",
@@ -15,6 +15,26 @@
   },
   "Courses": {
     "open": "Contact us",
-      "closed": "Next opening"
-  }
+    "closed": "Next opening"
+  },
+  "Masterclass": {
+    "open": "Contact us",
+    "closed": "Next opening"
+  },
+  "Gallery": {
+    "title": "Gallery",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt!"
+  },
+  "ContactInfo": {
+    "title": "Find us",
+    "follow": "Follow us"
+  },
+  "ContactForm": {
+    "title": "Get in Touch",
+    "name": "Your name",
+    "email": "Email address",
+    "message": "Your message",
+    "messageForm": "Message",
+    "button": "Submit"
+    }
 }

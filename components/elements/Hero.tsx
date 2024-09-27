@@ -16,7 +16,7 @@ export default function Hero() {
 
                 <div className="relative w-full h-full"
                     style={{
-                        clipPath: 'polygon(0 35%, 100% 80%, 100% 0, 0 0)',
+                        clipPath: 'polygon(0 75%, 100% 75%, 100% 0, 0 0)',
                     }}>
 
                     <Image src={heroImage} alt="hero image" priority fill className="object-cover object-center" />

@@ -35,10 +35,21 @@ export function NavBar() {
             }
         }
 
+        function handleLinkClick() {
+            if (collapseMenu) {
+                collapseMenu.style.display = 'none';
+            }
+        }
+
         if (toggleOpen && toggleClose) {
             toggleOpen.addEventListener('click', handleClick);
             toggleClose.addEventListener('click', handleClick);
         }
+
+        const links = document.querySelectorAll('#collapseMenu a') as NodeListOf<HTMLAnchorElement>;
+        links.forEach((link) => {
+            link.addEventListener('click', handleLinkClick);
+        });
 
         return () => {
             if (toggleOpen && toggleClose) {
@@ -49,15 +60,15 @@ export function NavBar() {
     }, []);
 
     return (
-        <header className='w-full fixed flex top-0 border-b border-1 font-sans min-h-[70px] tracking-wide z-50'>
+        <header className='w-full fixed flex top-0 border-b border-1 font-sans min-h-[70px] tracking-wide bg-white z-50'>
             <div className='w-full flex flex-wrap items-center justify-between gap-6 px-10 py-3 relative'>
-                <Image src={logo} fill={false} priority={true}  className="w-64 h-auto" alt={"Logo del sito"} />
+                <Image src={logo} fill={false} priority={true} className="w-64 h-auto" alt={"Logo del sito"} />
 
                 {/* BUTTON SWAP FOR SIDE MENU */}
                 <div id="collapseMenu"
                     className='max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-40 max-lg:before:inset-0 max-lg:before:z-50'>
                     <button id="toggleClose" className='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 fill-black" viewBox="0 0 320.591 320.591">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 fill-red-500" viewBox="0 0 320.591 320.591">
                             <path
                                 d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
                                 data-original="#000000"></path>
@@ -82,6 +93,7 @@ export function NavBar() {
                                     <Link
                                         href={item.href === "/" ? "/" : `/${locale}${item.href}`}
                                         className="font-semibold"
+                                        id="toggleClose"
                                     >
                                         {item.name}
                                     </Link>
