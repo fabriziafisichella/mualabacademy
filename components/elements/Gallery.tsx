@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { Title } from "../ui/Title";
 import { galleryList } from "@/src/app/[locale]/utils/galleryList";
 import { TextFade } from "../ui/texteffects/fade";
-import { BlurIn } from "../ui/texteffects/blurin";
 
 interface GalleryPrompts {
     title: string;
