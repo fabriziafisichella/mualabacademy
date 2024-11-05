@@ -1,5 +1,4 @@
-import { MasterActive } from "@/components/elements/MasterActive";
-import { MasterCard } from "@/components/elements/MasterCard";
+
 
 
 export default function Master() {

@@ -1,7 +1,4 @@
 import { FootBar } from "@/components/elements/FootBar";
-import { School } from "@/components/elements/School";
-import { Teachers } from "@/components/elements/Teachers";
-import { TextFade } from "@/components/ui/texteffects/fade";
 
 
 export default function About() {

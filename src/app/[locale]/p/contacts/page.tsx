@@ -1,9 +1,6 @@
 
 
-import { ContactForm } from "@/components/elements/ContactForm";
-import ContactInfo from "@/components/elements/ContactInfo";
 import { FootBar } from "@/components/elements/FootBar";
-import { TextFade } from "@/components/ui/texteffects/fade";
 
 export default function Contacts() {
   return (

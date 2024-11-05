@@ -1,5 +1,4 @@
 
-import { Course } from "@/components/elements/Course";
 import { CoursesEN, CoursesIT } from "../../utils/coursesList";
 import { useLocale } from "next-intl";
 import { FootBar } from "@/components/elements/FootBar";

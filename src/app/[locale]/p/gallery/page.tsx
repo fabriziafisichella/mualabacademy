@@ -1,6 +1,5 @@
 
 import { FootBar } from "@/components/elements/FootBar";
-import { GalleryComponent } from "@/components/elements/Gallery";
 import { useTranslations } from "next-intl";
 
 
