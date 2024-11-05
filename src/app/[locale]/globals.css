@@ -30,20 +30,19 @@ main {
 }
 
 h1 {
-  font-family: "Major Mono Display", monospace;
-  font-size: 32px;
-  font-weight: 400;
-  text-transform: lowercase;
-  color: #7e9181;
-}
-
-h2 {
   font-family: "Allerta Stencil", sans-serif;
-  font-size: 24px;
+  font-size: 30px;
   text-align: center;
   font-weight: 400;
   text-transform: uppercase;
   line-height: 30px;
+}
+
+h2 {
+  font-family: "Allerta Stencil", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: #93A996;
 }
 
 h3 {

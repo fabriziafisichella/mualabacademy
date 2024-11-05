@@ -3,9 +3,9 @@ import { FootBar } from "@/components/elements/FootBar";
 
 export default function About() {
   return (
-    <div className="h-screen w-screen">
+    <div className="w-screen">
 
-      <div className="w-full h-[75%] flex items-center justify-center">
+      <div className="w-full p-10 flex items-center justify-center">
         Work in progress.
       </div>
 

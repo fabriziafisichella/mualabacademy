@@ -1,11 +1,12 @@
 import createNextIntlPlugin from 'next-intl/plugin';
 
-const withNextIntl = createNextIntlPlugin();
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-
+  images: {
+    domains: ['drive.usercontent.google.com'],
+  },
 };
 
+const withNextIntl = createNextIntlPlugin();
 
 export default withNextIntl(nextConfig);

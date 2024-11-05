@@ -1,21 +1,58 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Title } from "../ui/Title";
-import { galleryList } from "@/src/app/[locale]/utils/galleryList";
 import { TextFade } from "../ui/texteffects/fade";
+import { useLocale } from 'next-intl';
+import Image from 'next/image';
 
 interface GalleryPrompts {
     title: string;
     description: string;
 }
 
+type File = {
+    id: string;
+    name: string;
+    webContentLink: string;
+};
+
 export const GalleryComponent: React.FC<GalleryPrompts> = ({ title, description }) => {
+
+    const [photos, setPhotos] = useState<File[]>([]);
+    const [error, setError] = useState<string | null>(null);
+    const locale = useLocale();
+
     const [activeIndex, setActiveIndex] = useState(-1);
 
     const openGallery = (index: number) => setActiveIndex(index);
     const closeGallery = () => setActiveIndex(-1);
 
-    const changeImage = (direction: 1 | -1) => setActiveIndex((prev) => (prev + direction + galleryList.length) % galleryList.length);
+    const changeImage = (direction: 1 | -1) => setActiveIndex((prev) => (prev + direction + photos.length) % photos.length);
+
+
+    useEffect(() => {
+        const fetchPhotos = async () => {
+            try {
+                const response = await fetch(`/${locale}/api/getGallery`);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch photos');
+                }
+                const data = await response.json();
+
+                // Directly set the photos without filtering
+                setPhotos(data); // Assuming `data` is already filtered on the server
+            } catch (error) {
+                setError(error instanceof Error ? error.message : 'Unknown error');
+            }
+        };
+
+        fetchPhotos();
+    }, [locale]);
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+
 
     useEffect(() => {
         const handleKeyDown = ({ key }: KeyboardEvent) => {
@@ -30,24 +67,27 @@ export const GalleryComponent: React.FC<GalleryPrompts> = ({ title, description 
     }, [activeIndex]);
 
     return (
-        <div className="w-screen h-[calc(100vh-120px)] p-8 flex flex-col gap-8 justify-center items-center">
+        <div className="w-screen h-full p-8 flex flex-col gap-8 justify-center items-center bg-white">
 
             <TextFade direction="down">
                 <Title title={title} description={description} />
             </TextFade>
 
 
-            <ul className="flex flex-wrap justify-center h-[75%] max-sm:h-[50%] gap-5 max-sm:gap-1 mx-auto overflow-y-auto drop-shadow-2xl">
+            <ul className="flex flex-wrap justify-center w-full gap-5 max-sm:gap-2 overflow-y-auto">
 
-                {galleryList.map((src, index) => (
+                {photos.map((photo, index) => (
 
-                    <li key={index}>
+                    <li key={index} className="shadow-2xl overflow-hidden rounded">
                         <TextFade direction="up">
-                            <img
+                            <Image
                                 onClick={() => openGallery(index)}
-                                src={src}
-                                className="transition-all hover:scale-105 w-[300px] h-[300px] max-sm:w-[100px] max-sm:h-[100px] object-cover bg-gray-200  cursor-pointer aspect-[5/6] lg:aspect-[2/3]"
+                                src={`https://drive.usercontent.google.com/download?id=${photo.id}`}
+                                className="transition-all hover:scale-105 max-sm:w-[160px] max-sm:h-[300px] object-cover bg-gray-200 rounded-md  cursor-pointer aspect-[5/6] lg:aspect-[2/3]"
                                 alt={`gallery image ${index + 1}`}
+                                width={"250"}
+                                height={"500"}
+                                loading="lazy"
                             />
                         </TextFade>
                     </li>
@@ -73,7 +113,16 @@ export const GalleryComponent: React.FC<GalleryPrompts> = ({ title, description 
                             </svg>
                         </button>
 
-                        <img className="object-contain w-full h-full" src={galleryList[activeIndex]} alt={`gallery image ${activeIndex + 1}`} />
+                        {photos[activeIndex] && ( 
+                            <Image
+                                className="object-contain w-full h-full"
+                                src={`https://drive.usercontent.google.com/download?id=${photos[activeIndex].id}`} 
+                                alt={`gallery image ${activeIndex + 1}`}
+                                width={800} 
+                                height={600}
+                                loading="lazy"
+                            />
+                        )}
 
                         <button
                             onClick={(e) => {

@@ -26,49 +26,49 @@ export default function Header() {
         case `/${locale}`:
             backgroundImage = mainImg.src;
             style = "right-0";
-            headerDimension = "h-[100dvh]";
+            headerDimension = "h-[100vh]";
             status = false;
             logoDimension = "w-[75%] max-sm:w-[50%]";
             break;
         case `/${locale}/p/about`:
             backgroundImage = aboutImg.src;
             style = "left-0";
-            headerDimension = "h-[70dvh]";
+            headerDimension = "h-[70vh]";
             status = true;
             title = locale === "it" ? "Chi siamo" : "About us";
-            logoDimension = "w-[50%] max-sm:w-[25%]";
+            logoDimension = "w-[50%] max-sm:w-[35%]";
             break;
         case `/${locale}/p/courses`:
             backgroundImage = coursesImg.src;
             style = "left-0";
-            headerDimension = "h-[70dvh]";
+            headerDimension = "h-[70vh]";
             status = true;
-            title = locale === "it" ? "Corsi, Masterclass, Eventi" : "Courses, Masterclasses, Events";
-            logoDimension = "w-[50%] max-sm:w-[25%]";
+            title = locale === "it" ? "Masterclass, Corsi ed Eventi" : "Masterclasses, Courses and Events";
+            logoDimension = "w-[50%] max-sm:w-[35%]";
             break;
         case `/${locale}/p/gallery`:
             backgroundImage = galleryImg.src;
             style = "left-0";
-            headerDimension = "h-[70dvh]";
+            headerDimension = "h-[70vh]";
             status = true;
             title = locale === "it" ? "Galleria" : "Gallery";
-            logoDimension = "w-[50%] max-sm:w-[25%]";
+            logoDimension = "w-[50%] max-sm:w-[35%]";
             break;
         case `/${locale}/p/contacts`:
             backgroundImage = contactsImg.src;
             style = "left-0";
-            headerDimension = "h-[70dvh]";
+            headerDimension = "h-[70vh]";
             status = true;
             title = locale === "it" ? "Contatti" : "Contact Us";
-            logoDimension = "w-[50%] max-sm:w-[25%]";
+            logoDimension = "w-[50%] max-sm:w-[35%]";
             break;
         default:
             backgroundImage = mainImg.src;
             style = "right-0";
-            headerDimension = "h-[100dvh]";
+            headerDimension = "h-[100vh]";
             status = false;
             title = "";
-            logoDimension = "w-[50%] max-sm:w-[25%]";
+            logoDimension = "w-[50%] max-sm:w-[35%]";
             break;
     }
 
@@ -81,15 +81,15 @@ export default function Header() {
                     className={`fixed top-0 left-0 w-full ${headerDimension} bg-cover bg-center -z-10`}
                     style={{ backgroundImage: `url(${backgroundImage})` }}>
 
-                    <div className={`absolute backdrop-blur-[1px] bg-white bg-opacity-50 h-full w-[30%] max-sm:top-0 max-sm:w-full max-sm:h-[40%] flex flex-col md:gap-8 items-center justify-center shadow-2xl ${style}`}>
+                    <div className={`absolute backdrop-blur-[1px] bg-white bg-opacity-50 h-full w-[30%] /*max-sm:top-[50%] max-sm:translate-y-[-50%]*/ max-sm:py-5 max-sm:h-fit max-sm:w-full flex flex-col md:gap-8 items-center justify-center shadow-2xl ${style}`}>
 
                         <div className="flex items-center justify-center">
                             <Image src={logo} alt={"logo del sito"} priority={true} className={`relative ${logoDimension}`} />
                         </div>
 
-                        {status && <h2 className="drop-shadow-2xl lg:text-5xl p-5">
+                        {status && <h1 className="drop-shadow-2xl lg:text-4xl pt-5">
                             {title}
-                        </h2>}
+                        </h1>}
 
                     </div>
                 </div>

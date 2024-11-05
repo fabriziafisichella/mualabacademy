@@ -25,22 +25,22 @@ export function FootBar() {
                     90145 Palermo PA <br />
                     <div className="flex mt-4 max-sm:justify-center w-full gap-2 text-[#7e9181]">
                         <a href={""} target="_blank" rel="noopener noreferrer" className="p-2 bg-[#93A996] rounded-xl hover:opacity-50 transition-all">
-                            <FaInstagram className="h-8 w-8 fill-white transition-all" />
+                            <FaInstagram className="h-6 w-6 fill-white transition-all" />
                         </a>
                         <a href={""} target="_blank" rel="noopener noreferrer" className="p-2 bg-[#93A996] rounded-xl hover:opacity-50 transition-all">
-                            <FaTwitter className="h-8 w-8 fill-white transition-all" />
+                            <FaTwitter className="h-6 w-6 fill-white transition-all" />
                         </a>
                         <a href={""} target="_blank" rel="noopener noreferrer" className="p-2 bg-[#93A996] rounded-xl hover:opacity-50 transition-all">
-                            <FaFacebook className="h-8 w-8 fill-white transition-all" />
+                            <FaFacebook className="h-6 w-6 fill-white transition-all" />
                         </a>
                         <a href={""} target="_blank" rel="noopener noreferrer" className="p-2 bg-[#93A996] rounded-xl hover:opacity-50 transition-all">
-                            <FaLinkedin className="h-8 w-8 fill-white transition-all" />
+                            <FaLinkedin className="h-6 w-6 fill-white transition-all" />
                         </a>
                         <a href={""} target="_blank" rel="noopener noreferrer" className="p-2 bg-[#93A996] rounded-xl hover:opacity-50 transition-all">
-                            <FaYoutube className="h-8 w-8 fill-white transition-all" />
+                            <FaYoutube className="h-6 w-6 fill-white transition-all" />
                         </a>
                         <a href={""} target="_blank" rel="noopener noreferrer" className="p-2 bg-[#93A996] rounded-xl hover:opacity-50 transition-all">
-                            <FaTiktok className="h-8 w-8 fill-white transition-all" />
+                            <FaTiktok className="h-6 w-6 fill-white transition-all" />
                         </a>
                     </div>
                 </div>
