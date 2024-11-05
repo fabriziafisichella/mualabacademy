@@ -39,8 +39,8 @@ export const GalleryComponent: React.FC<GalleryPrompts> = ({ title, description 
                 }
                 const data = await response.json();
 
-                // Directly set the photos without filtering
-                setPhotos(data); // Assuming `data` is already filtered on the server
+               
+                setPhotos(data); 
             } catch (error) {
                 setError(error instanceof Error ? error.message : 'Unknown error');
             }
@@ -48,11 +48,6 @@ export const GalleryComponent: React.FC<GalleryPrompts> = ({ title, description 
 
         fetchPhotos();
     }, [locale]);
-
-    if (error) {
-        return <div>Error: {error}</div>;
-    }
-
 
     useEffect(() => {
         const handleKeyDown = ({ key }: KeyboardEvent) => {
@@ -65,6 +60,11 @@ export const GalleryComponent: React.FC<GalleryPrompts> = ({ title, description 
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
     }, [activeIndex]);
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+
 
     return (
         <div className="w-screen h-full p-8 flex flex-col gap-8 justify-center items-center bg-white">
