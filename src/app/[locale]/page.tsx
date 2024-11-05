@@ -1,7 +1,4 @@
 import { FootBar } from "@/components/elements/FootBar";
-import Hero from "@/components/elements/Hero";
-import { Reviews } from "@/components/elements/Reviews";
-import { TextFade } from "@/components/ui/texteffects/fade";
 
 export default function Home() {
   return (

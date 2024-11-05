@@ -48,7 +48,7 @@ export function FootBar() {
                 <div className="max-sm:text-[15px] w-[30%] max-sm:w-[75%] flex flex-col items-center">
                     <p className="font-semibold max-sm:text-center">{t("links")} </p>
                     <p className="flex gap-2 max-sm:text-[15px] flex-wrap w-[200px] max-sm:w-[180px] justify-between">
-                        {list.map((link, index) => <a id="index" href={`/${locale}${link.href}`}>{link.name}</a>)}
+                        {list.map((link, index) => <a id="index" key={index} href={`/${locale}${link.href}`}>{link.name}</a>)}
                     </p>
                 </div>
             </div>
