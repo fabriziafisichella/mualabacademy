@@ -9,8 +9,12 @@ export default function Gallery() {
   return (
     <div className="h-screen w-screen">
 
-      <GalleryComponent title={t("title")} description={t("description")} />
-      
+      <div className="w-full h-[75%] flex items-center justify-center">
+        Work in progress.
+      </div>
+
+      {/* <GalleryComponent title={t("title")} description={t("description")} /> */}
+
       <FootBar />
 
     </div>
