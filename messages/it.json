@@ -36,5 +36,12 @@
     "message": "Il tuo messaggio",
     "messageForm": "Messaggio",
     "button": "Invia"
+  },
+  "Footer": {
+    "vat": "P.IVA",
+    "office": "Sede Legale",
+    "links": "Link rapidi",
+    "rights": "Tutti i diritti riservati",
+    "terms": "Termini e Condizioni"
   }
 }

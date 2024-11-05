@@ -36,5 +36,12 @@
     "message": "Your message",
     "messageForm": "Message",
     "button": "Submit"
-    }
+  },
+  "Footer": {
+    "vat": "VAT number",
+    "office": "Registered Office",
+    "links": "Quick Links",
+    "rights": "All Rights Reserved",
+    "terms": "Terms and Conditions"
+  }
 }

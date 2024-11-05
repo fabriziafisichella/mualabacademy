@@ -1,3 +1,4 @@
+import { FootBar } from "@/components/elements/FootBar";
 import { School } from "@/components/elements/School";
 import { Teachers } from "@/components/elements/Teachers";
 import { TextFade } from "@/components/ui/texteffects/fade";
@@ -5,17 +6,23 @@ import { TextFade } from "@/components/ui/texteffects/fade";
 
 export default function About() {
   return (
-    <div className="text-black">
+    <div className="h-screen w-screen">
 
-      <section id="school">
+      <div className="w-full h-[75%] flex items-center justify-center">
+        Work in progress.
+      </div>
+
+      {/* <div id="school">
         <TextFade direction="down">
           <School />
         </TextFade>
-      </section>
+      </div>
 
-      <section id="team">
-          <Teachers />
-      </section>
+      <div id="team">
+        <Teachers />
+      </div> */}
+
+      <FootBar />
 
     </div>
   );

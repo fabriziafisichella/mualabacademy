@@ -6,8 +6,8 @@ export const NavBarIT = [
     },
     {
         name: "Chi siamo",
-        href: "",
-        dropdown: true,
+        href: "/p/about",
+        dropdown: false,
         multiplecolumns: false,
         subcat: [
             { name: "La scuola", href: "/p/about/#school" },
@@ -15,10 +15,10 @@ export const NavBarIT = [
         ]
     },
     {
-        name: "Corsi",
-        href: "",
-        dropdown: true,
-        multiplecolumns: true,
+        name: "Corsi, Masterclass ed Eventi",
+        href: "/p/courses",
+        dropdown: false,
+        multiplecolumns: false,
         columns: [
             {
                 name: "Corsi Standard",
@@ -58,8 +58,8 @@ export const NavBarEN = [
     },
     {
         name: "About Us",
-        href: "",
-        dropdown: true,
+        href: "/p/about",
+        dropdown: false,
         multiplecolumns: false,
         subcat: [
             { name: "The school", href: "/p/about/#school" },
@@ -67,10 +67,10 @@ export const NavBarEN = [
         ]
     },
     {
-        name: "Courses",
-        href: "",
-        dropdown: true,
-        multiplecolumns: true,
+        name: "Courses, Masterclasses and Events",
+        href: "/p/courses",
+        dropdown: false,
+        multiplecolumns: false,
         columns: [
             {
                 name: "Standard Courses",

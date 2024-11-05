@@ -2,29 +2,36 @@
 
 import { ContactForm } from "@/components/elements/ContactForm";
 import ContactInfo from "@/components/elements/ContactInfo";
+import { FootBar } from "@/components/elements/FootBar";
 import { TextFade } from "@/components/ui/texteffects/fade";
 
 export default function Contacts() {
   return (
-    <>
-      <TextFade direction="up">
+    <div className="h-screen w-screen">
+
+      <div className="w-full h-[75%] flex items-center justify-center">
+        Work in progress.
+      </div>
+
+      {/* <TextFade direction="up">
       <div id="mobileFix">
-        <section >
+
           <ContactInfo />
-        </section>
-        <section>
+
           <ContactForm />
-        </section>
+
       </div>
 
       <div id="desktopFix">
-        <section>
+
           <ContactInfo />
           <ContactForm />
-        </section>
-      </div>
-      </TextFade>
 
-    </>
+      </div>
+      </TextFade> */}
+
+      <FootBar />
+
+    </div>
   );
 }

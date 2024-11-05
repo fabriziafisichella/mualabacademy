@@ -2,6 +2,7 @@
 import { Course } from "@/components/elements/Course";
 import { CoursesEN, CoursesIT } from "../../utils/coursesList";
 import { useLocale } from "next-intl";
+import { FootBar } from "@/components/elements/FootBar";
 
 export default function Courses() {
 
@@ -10,13 +11,19 @@ export default function Courses() {
 
   return (
 
-    <div className="text-black">
+    <div className="h-screen w-screen">
 
-      {list.map((course, index) =>
-          <section key={index} id={course.id}>
+      <div className="w-full h-[75%] flex items-center justify-center">
+        Work in progress.
+      </div>
+
+      {/* {list.map((course, index) =>
+          <div key={index} id={course.id}>
             <Course course={course} />
-          </section>
-      )}
+          </div>
+      )} */}
+
+      <FootBar />
 
     </div>
   );

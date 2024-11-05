@@ -1,10 +1,9 @@
 "use client";
 import { useEffect } from "react";
-import logo from "../../src/app/[locale]/assets/images/logo.png";
+import { VscGlobe } from "react-icons/vsc";
 import { useLocale } from "next-intl";
 import { NavBarEN, NavBarIT } from "../../src/app/[locale]/utils/navbarList";
 import { useRouter, usePathname } from "next/navigation"
-import Image from "next/image";
 import Link from "next/link";
 
 export function NavBar() {
@@ -19,6 +18,10 @@ export function NavBar() {
         const newPathname = `/${newLocale}${pathname.substring(3)}`;
         router.push(newPathname, { scroll: false });
     };
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }, [pathname]);
 
     useEffect(() => {
         const toggleOpen = document.getElementById('toggleOpen') as HTMLButtonElement | null;
@@ -60,15 +63,25 @@ export function NavBar() {
     }, []);
 
     return (
-        <header className='w-full fixed flex top-0 border-b border-1 font-sans min-h-[70px] tracking-wide bg-white z-50'>
+        <header className='w-full  flex border-b border-1 font-sans min-h-[70px] tracking-wide bg-white'>
             <div className='w-full flex flex-wrap items-center justify-between gap-6 px-10 py-3 relative'>
-                <Image src={logo} fill={false} priority={true} className="w-64 h-auto" alt={"Logo del sito"} />
+                <div className="text-black cursor-pointer pointer-events-auto  flex gap-2 items-center"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        changeLanguage(locale === "it" ? "en" : "it");
+                    }}>
+                    
+                        <VscGlobe className="h-6 w-6" />
+
+
+                    {locale === "it" ? "Italiano" : "English"}
+                </div>
 
                 {/* BUTTON SWAP FOR SIDE MENU */}
                 <div id="collapseMenu"
                     className='max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-40 max-lg:before:inset-0 max-lg:before:z-50'>
                     <button id="toggleClose" className='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 fill-red-500" viewBox="0 0 320.591 320.591">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 fill-black" viewBox="0 0 320.591 320.591">
                             <path
                                 d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
                                 data-original="#000000"></path>
@@ -82,24 +95,32 @@ export function NavBar() {
                     <ul
                         className='lg:flex lg:ml-10 lg:gap-x-10 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-2/3 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-4 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
                         <li className='max-lg:border-b max-lg:pb-4 px-3 lg:hidden'>
-                            <Image src={logo} fill={false} priority={true} height={50} width={200} alt={"Logo del sito"} />
+                            <div className="text-black cursor-pointer pointer-events-auto flex gap-2 items-center"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    changeLanguage(locale === "it" ? "en" : "it");
+                                }}>
+                                <span><VscGlobe /></span>
+
+                                {locale === "it" ? "Italiano" : "English"}
+
+                            </div>
                         </li>
 
                         {list.map((item, index) => (
-                            <li key={index} className='max-lg:border-b max-lg:px-3 max-lg:py-2 text-zinc-500 hover:text-[#93a996] text-xl relative group text-[14px]'>
+                            <li key={index} className='max-lg:border-b max-lg:px-3 max-lg:py-2 text-xl relative group text-[14px]' id={pathname === `/${locale}${item.href}` ? "link-active" : "link"}>
                                 {item.dropdown ? (
-                                    <span className="text-gray-500 cursor-pointer font-semibold">{item.name}</span>
+                                    <span>{item.name}</span>
                                 ) : (
                                     <Link
                                         href={item.href === "/" ? "/" : `/${locale}${item.href}`}
-                                        className="font-semibold"
                                         id="toggleClose"
                                     >
                                         {item.name}
                                     </Link>
                                 )}
 
-                                {item.dropdown &&
+                                {/* {item.dropdown &&
                                     <>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" className="ml-1 inline-block -mt-1"
@@ -153,19 +174,10 @@ export function NavBar() {
                                             </div>
                                         </div>
                                     </>
-                                }
+                                } */}
 
                             </li>))}
 
-                        <li>
-                            <div className="text-black cursor-pointer pointer-events-auto"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    changeLanguage(locale === "it" ? "en" : "it");
-                                }}>
-                                [ {locale === "it" ? "Italiano" : "English"} ]
-                            </div>
-                        </li>
                     </ul>
                 </div>
 
