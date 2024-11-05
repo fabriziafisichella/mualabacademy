@@ -1,12 +1,12 @@
 
-import { CoursesEN, CoursesIT } from "../../utils/coursesList";
-import { useLocale } from "next-intl";
+/* import { CoursesEN, CoursesIT } from "../../utils/coursesList";
+import { useLocale } from "next-intl"; */
 import { FootBar } from "@/components/elements/FootBar";
 
 export default function Courses() {
 
-  const locale = useLocale();
-  const list = (locale === "it" ? CoursesIT : CoursesEN);
+/*   const locale = useLocale();
+  const list = (locale === "it" ? CoursesIT : CoursesEN); */
 
   return (
 

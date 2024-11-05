@@ -1,10 +1,10 @@
 
 import { FootBar } from "@/components/elements/FootBar";
-import { useTranslations } from "next-intl";
+/* import { useTranslations } from "next-intl"; */
 
 
 export default function Gallery() {
-  const t = useTranslations("Gallery");
+/*   const t = useTranslations("Gallery"); */
   return (
     <div className="h-screen w-screen">
 
