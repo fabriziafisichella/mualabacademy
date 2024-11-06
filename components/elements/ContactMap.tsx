@@ -1,12 +1,9 @@
 
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 import contactsImg from "../../src/app/[locale]/assets/images/contacts.jpg"
 
 
 export function ContactMap() {
-
-    const t = useTranslations("Contacts");
 
     return (
         <div className="w-screen min-h-[500px] flex justify-center items-center relative">
