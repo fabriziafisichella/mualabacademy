@@ -3,7 +3,9 @@ import logo from "../../src/app/[locale]/assets/images/logo.png";
 import { useTranslations } from "next-intl";
 import { NavBarEN, NavBarIT } from "@/src/app/[locale]/utils/navbarList";
 import { useLocale } from "next-intl";
-import { FaInstagram, FaTwitter, FaFacebook, FaLinkedin, FaYoutube, FaTiktok } from "react-icons/fa6";
+import { socialsList } from "@/src/app/[locale]/utils/socialsList";
+import { IconType } from "react-icons";
+import React from 'react';
 
 export function FootBar() {
 
@@ -23,25 +25,13 @@ export function FootBar() {
                     {t("vat")} ( 012219391203819203 ) <br />
                     {t("office")} - Via Giovanni Paisiello, 21
                     90145 Palermo PA <br />
+
                     <div className="flex mt-4 max-sm:justify-center w-full gap-2 text-[#7e9181]">
-                        <a href={""} target="_blank" rel="noopener noreferrer" className="p-2 bg-[#93A996] rounded-xl hover:opacity-50 transition-all">
-                            <FaInstagram className="h-6 w-6 fill-white transition-all" />
-                        </a>
-                        <a href={""} target="_blank" rel="noopener noreferrer" className="p-2 bg-[#93A996] rounded-xl hover:opacity-50 transition-all">
-                            <FaTwitter className="h-6 w-6 fill-white transition-all" />
-                        </a>
-                        <a href={""} target="_blank" rel="noopener noreferrer" className="p-2 bg-[#93A996] rounded-xl hover:opacity-50 transition-all">
-                            <FaFacebook className="h-6 w-6 fill-white transition-all" />
-                        </a>
-                        <a href={""} target="_blank" rel="noopener noreferrer" className="p-2 bg-[#93A996] rounded-xl hover:opacity-50 transition-all">
-                            <FaLinkedin className="h-6 w-6 fill-white transition-all" />
-                        </a>
-                        <a href={""} target="_blank" rel="noopener noreferrer" className="p-2 bg-[#93A996] rounded-xl hover:opacity-50 transition-all">
-                            <FaYoutube className="h-6 w-6 fill-white transition-all" />
-                        </a>
-                        <a href={""} target="_blank" rel="noopener noreferrer" className="p-2 bg-[#93A996] rounded-xl hover:opacity-50 transition-all">
-                            <FaTiktok className="h-6 w-6 fill-white transition-all" />
-                        </a>
+                        {socialsList.map((social, idx) => (
+                            <a key={idx} href={social.href} className="p-2 bg-[#93A996] rounded-xl hover:opacity-50 transition-all">
+                                {React.createElement(social.icon as IconType, { className: "h-6 w-6 fill-white transition-all" })}
+                            </a>
+                        ))}
                     </div>
                 </div>
 

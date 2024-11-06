@@ -88,6 +88,7 @@ export const GalleryComponent: React.FC<GalleryPrompts> = ({ title, description 
                                 width={"250"}
                                 height={"500"}
                                 loading="lazy"
+                                quality={0}
                             />
                         </TextFade>
                     </li>
@@ -121,6 +122,7 @@ export const GalleryComponent: React.FC<GalleryPrompts> = ({ title, description 
                                 width={800} 
                                 height={600}
                                 loading="lazy"
+                                quality={0}
                             />
                         )}
 

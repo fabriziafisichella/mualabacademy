@@ -1,80 +1,68 @@
 import { useTranslations } from "next-intl";
-import { Title } from "../ui/Title"
-import { FaLocationDot, FaPhone, FaInstagram, FaTwitter, FaFacebook, FaLinkedin, FaYoutube, FaTiktok } from "react-icons/fa6";
-import { SiMaildotru } from "react-icons/si";
+import React from 'react';
+import { Title } from "../ui/Title";
+import { Button } from "../ui/button";
+import { socialsList } from "@/src/app/[locale]/utils/socialsList";
+import { IconType } from "react-icons";
 
 
 export default function ContactInfo() {
 
-    const t = useTranslations("ContactInfo");
+    const t = useTranslations("Contacts");
 
     return (
-        <div className="h-[calc(100dvh-120px) w-screen flex justify-center items-center p-4">
+        <div className="w-screen flex flex-col justify-center items-center">
 
-            <div className="max-sm:w-[80%] w-[60%]">
+            <div className="w-[60%] max-sm:w-[90%] pt-12 pb-12">
 
-                <Title title={t("title")} />
+                <Title title={t("title")} altClass={" text-left max-sm:text-center "} />
 
-                <div className="space-y-4">
-                    <p className="flex -mx-2  items-center">
-                        <span className=" text-[#7e9181] w-7 dark:text-gray-400">
-                            <FaLocationDot className="h-7" />
-                        </span>
-                        <span className="text-gray-700 dark:text-gray-400">
-                            Via Giovanni Paisiello, 21
-                            90145 Palermo PA
-                        </span>
-                    </p>
-                    <p className="flex -mx-2  items-center">
-                        <span className=" text-[#7e9181] w-7 dark:text-gray-400">
-                            <FaPhone className="h-7" />
-                        </span>
-                        <span className="text-gray-700 dark:text-gray-400">
-                            +39 000 000 000 <br />
-                            257 563-7401
-                        </span>
-                    </p>
-                    <p className="flex -mx-2  items-center">
-                        <span className=" text-[#7e9181] w-7 dark:text-gray-400">
-                            <SiMaildotru className="h-7" />
-                        </span>
-                        <span className="text-gray-700 dark:text-gray-400">
-                            acb@example.com
-                        </span>
-                    </p>
+                <p className="max-sm:text-center">Via Giovanni Paisiello, 21 90145 Palermo PA <br />
+                    ( +39 ) 088 389 3997</p>
+
+                <div className="flex mt-4 max-sm:justify-center w-full gap-2 text-[#7e9181] mb-6">
+
+                    {socialsList.map((social, idx) => (
+                        <a key={idx} href={social.href} className="p-2 bg-[#93A996] rounded-xl hover:opacity-50 transition-all">
+                            {React.createElement(social.icon as IconType, { className: "h-4 w-4 fill-white transition-all" })}
+                        </a>
+                    ))}
+
                 </div>
-                <div className="mt-6 w-full">
-                    <h3 className="text-gray-600 dark:text-gray-300"> {t("follow")} </h3>
-                    <div className="flex mt-4 -mx-1.5 justify-center w-full gap-2 text-[#7e9181]">
-                        <a href={""} target="_blank" rel="noopener noreferrer">
-                            <FaInstagram className="h-8 w-8 hover:text-black transition-all" />
-                        </a>
-                        <a href={""} target="_blank" rel="noopener noreferrer">
-                            <FaTwitter className="h-8 w-8 hover:text-black transition-all" />
-                        </a>
-                        <a href={""} target="_blank" rel="noopener noreferrer">
-                            <FaFacebook className="h-8 w-8 hover:text-black transition-all" />
-                        </a>
-                        <a href={""} target="_blank" rel="noopener noreferrer">
-                            <FaLinkedin className="h-8 w-8 hover:text-black transition-all" />
-                        </a>
-                        <a href={""} target="_blank" rel="noopener noreferrer">
-                            <FaYoutube className="h-8 w-8 hover:text-black transition-all" />
-                        </a>
-                        <a href={""} target="_blank" rel="noopener noreferrer">
-                            <FaTiktok className="h-8 w-8 hover:text-black transition-all" />
-                        </a>
+
+                <form className="">
+
+                    <div className="flex-1">
+                        <input
+                            type="text"
+                            placeholder="John Doe"
+                            className="block w-full px-5 py-3 mt-2 bg-white border border-[#757575] rounded-xl dark:bg-gray-900 dark:border-gray-700 focus:outline-none"
+                        />
                     </div>
-                </div>
 
-                <div className="mt-6 w-full md:mt-8">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3138.2063310116087!2d13.3343486!3d38.135394999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1319ef366725ff8b%3A0x425489195036b22b!2sMua%20Lab!5e0!3m2!1sit!2sit!4v1727444480453!5m2!1sit!2sit"
-                        className="border w-full h-full"
-                        allowFullScreen
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade" />
-                </div>
+                    <div className="flex-1 mt-6">
+                        <input
+                            type="email"
+                            placeholder="johndoe@example.com"
+                            className="block w-full px-5 py-3 mt-2 bg-white border border-[#757575] rounded-xl dark:bg-gray-900 dark:border-gray-700 focus:outline-none"
+                        />
+                    </div>
+
+                    <div className="w-full mt-6">
+                        <textarea
+                            className="block w-full h-32 px-5 py-3 mt-2 bg-white border border-[#757575] rounded-xl dark:bg-gray-900 dark:border-gray-700 focus:outline-none"
+                            placeholder={t("messageForm")}
+                        ></textarea>
+                    </div>
+
+                    <Button >
+                        {t("button")}
+                    </Button>
+
+                </form>
+
             </div>
+
         </div>
     );
 };

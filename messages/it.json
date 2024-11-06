@@ -25,17 +25,10 @@
     "title": "Galleria",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt!"
   },
-  "ContactInfo": {
-    "title": "Dove trovarci",
-    "follow": "Seguici"
-  },
-  "ContactForm": {
+  "Contacts": {
     "title": "Contattaci",
-    "name": "Il tuo nome",
-    "email": "La tua mail",
-    "message": "Il tuo messaggio",
     "messageForm": "Messaggio",
-    "button": "Invia"
+    "button": "Invia il messaggio"
   },
   "Footer": {
     "vat": "P.IVA",

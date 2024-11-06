@@ -1,31 +1,28 @@
-
-
+import { ContactMap } from "@/components/elements/ContactMap";
+import ContactInfo from "@/components/elements/ContactInfo";
 import { FootBar } from "@/components/elements/FootBar";
+import { TextFade } from "@/components/ui/texteffects/fade";
 
 export default function Contacts() {
   return (
     <div className="w-screen">
 
-      <div className="w-full p-10 flex items-center justify-center">
-        Work in progress.
-      </div>
-
-      {/* <TextFade direction="up">
+      <TextFade direction="up">
       <div id="mobileFix">
 
           <ContactInfo />
 
-          <ContactForm />
+          <ContactMap />
 
       </div>
 
       <div id="desktopFix">
 
           <ContactInfo />
-          <ContactForm />
+          <ContactMap />
 
       </div>
-      </TextFade> */}
+      </TextFade>
 
       <FootBar />
 
