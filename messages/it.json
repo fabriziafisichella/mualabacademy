@@ -14,12 +14,14 @@
     "teachersDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt!"
   },
   "Courses": {
+    "starting": "Inizio:",
     "open": "Richiedi informazioni",
     "closed": "Prossima apertura"
   },
   "Masterclass": {
-    "open": "Contact us",
-    "closed": "Next opening"
+    "title": "Le nostre Masterclass",
+    "description": "Lorem ipsum dolor sit amet",
+    "open": "Richiedi informazioni"
   },
   "Gallery": {
     "title": "Galleria",

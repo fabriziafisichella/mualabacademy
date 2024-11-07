@@ -78,9 +78,14 @@ const config: Config = {
 			},
 			clipPath: {
 				triangle: "polygon(50% 0%, 0% 100%, 100% 100%)",
+			},
+			textShadow: {
+				sm: '1px 1px 2px rgba(0, 0, 0, 0.5)',
+				md: '2px 2px 4px rgba(0, 0, 0, 0.3)',
+				lg: '3px 3px 6px rgba(0, 0, 0, 0.3)',
 			  },
 		},
-		plugins: [require("tailwindcss-animate"), addVariablesForColors, require("tailwind-clip-path")],
+		plugins: [require("tailwindcss-animate"), addVariablesForColors, require("tailwind-clip-path"), require("tailwindcss-textshadow")],
 	}
 }
 export default config;

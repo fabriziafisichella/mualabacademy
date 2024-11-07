@@ -1,20 +1,22 @@
+import Image from "next/image"
 import { Button } from "../ui/button"
 import { TextFade } from "../ui/texteffects/fade"
 import { Title } from "../ui/Title"
 import { useTranslations } from "next-intl"
-import {useLocale} from "next-intl"
+import { useLocale } from "next-intl"
+import { MdOutlineVerified } from "react-icons/md";
+
 
 interface CourseProps {
     course: {
         name: string,
         image: string,
-        hours: string,
+        duration: string,
         starting: string,
-        modules: string,
+        modules: Array<string>,
         description: string,
         open: boolean,
         direction: string,
-        id: string,
     }
 }
 
@@ -28,32 +30,47 @@ export function Course({ course }: CourseProps) {
 
         <TextFade direction="up">
 
-            <div className={`${course.direction === "left" ? "flex-row" : "flex-row-reverse"} relative w-screen h-[calc(100dvh-120px)] flex justify-between items-center max-sm:flex-col max-sm:justify-start`}>
+            <div className={`${course.direction === "left" ? "flex-row-reverse " : "flex-row bg-[#BCD0BF]"} gap-5 relative w-screen h-fit flex justify-evenly items-center max-sm:flex-col p-24 max-sm:p-8 max-sm:pt-12 max-sm:pb-16`}>
 
-                <div className="h-[60%] w-[75%] max-sm:w-full max-sm:h-[50%] drop-shadow-2xl bg-white">
-                    <img src={course.image} alt="background" className="object-cover h-full w-full" />
-                </div>
+                <div className="w-full flex justify-center items-center ">
+                    <div className="w-[75%] max-sm:w-full">
+                        <Title title={course.name} altClass={`max-sm:text-center leading-9 ${course.direction === "left" ? "text-[#BCD0BF]" : "text-white"}`} />
 
+                        <h3 className="text-[#757575] max-sm:text-center">{course.duration}</h3>
 
-                <div className={`${course.direction === "left" ? "right-56 max-sm:right-0" : "left-56 max-sm:left-0"} flex flex-col max-sm:leading-tight absolute w-[25%] max-sm:w-[75%] max-sm:left-[50%] max-sm:transform max-sm:-translate-x-[50%] max-sm:top-[50%] max-sm:-translate-y-[50%] drop-shadow-2xl py-8 bg-white overflow:visible`}>
-                    <h2>{course.hours}</h2>
-                    <Title title={course.name} description={course.description} />
+                        <p className="max-sm:text-center">
+                            {course.description}
 
-                    <div className="px-4 text-center">
-                        <h3 className="text-center text-[#7e9181] py-4">
-                            {course.modules}
-                        </h3>
+                        </p>
+
+                        <h3 className="text-[#757575] max-sm:text-center">{t("starting")} {course.starting}</h3>
+
+                        <ul className="flex gap-5 w-full justify-evenly flex-wrap max-sm:justify-center mt-6 mb-2">
+                            {course.modules.map((module, idx) =>
+                                <li key={idx} className="flex items-center gap-1 font-semibold leading-[8px]">
+                                    <MdOutlineVerified /> {module}
+                                </li>)}
+                        </ul>
 
                         {course.open
-                            ? <Button className="uppercase">
-                                <a href={`/${locale}/p/contacts`}>
+                            ? <a href={`/${locale}/p/contacts`}>
+                                <Button variant="secondary" className="">
                                     {t("open")}
-                                </a>
-                            </Button>
-                            : <h2>{t("closed")} <br /> {course.starting}</h2>
+                                </Button>
+                            </a>
+                            : <h3 className="text-center mt-6">{t("closed")}  {course.starting}</h3>
                         }
+
                     </div>
                 </div>
+
+                <div className=" w-full flex justify-center items-center">
+                    <div className="h-[350px] w-[500px] max-sm:h-[150px] max-sm:w-[100%] relative overflow-hidden rounded-xl drop-shadow-2xl">
+                        <Image src={course.image} alt="Course Image" fill={true} style={{ objectFit: "cover" }} />
+                    </div>
+
+                </div>
+
 
             </div>
 

@@ -85,7 +85,7 @@ export default function Header() {
                     />
                 </div>
                 
-                    <div className={` fixed top-0 left-0 ${headerDimension} -z-10 backdrop-blur-[1px] bg-white bg-opacity-50 w-[30%] max-sm:py-5 max-sm:h-fit max-sm:w-full flex flex-col md:gap-8 items-center justify-center shadow-2xl ${style}`}>
+                    <div className={` fixed top-0 ${headerDimension} -z-10 backdrop-blur-[1px] bg-white bg-opacity-50 w-[30%] max-sm:py-5 max-sm:h-fit max-sm:w-full flex flex-col md:gap-8 items-center justify-center shadow-2xl ${style}`}>
                         <div className="flex items-center justify-center">
                             <Image src={logo} alt={"logo del sito"} priority={true} className={`relative ${logoDimension}`} quality={0} />
                         </div>

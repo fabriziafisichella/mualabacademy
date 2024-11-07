@@ -7,7 +7,7 @@ interface TitleProps {
 
 export function Title({ title, description, altClass }: TitleProps) {
     return (
-        <div className={`flex flex-col gap-2 justify-center ${altClass ? altClass : 'text-center mx-12'}`}>
+        <div className={`flex flex-col gap-2 justify-center ${altClass ? altClass : 'text-center mx-12 text-[#93A996]'}`}>
             <h2>
                 {title}
             </h2>

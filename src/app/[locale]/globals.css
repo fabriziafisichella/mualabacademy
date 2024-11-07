@@ -42,17 +42,12 @@ h2 {
   font-family: "Allerta Stencil", sans-serif;
   font-size: 40px;
   font-weight: 400;
-  color: #93A996;
 }
 
 h3 {
-  font-family: 'Major Mono Display', monospace;
-  font-size: 14px;
-  margin-top: 5px;
-  text-align: center;
+  font-size: 16px;
   font-weight: 600;
-  color: #fff;
-  text-transform: lowercase;
+  text-transform: uppercase;
 }
 
 hr {

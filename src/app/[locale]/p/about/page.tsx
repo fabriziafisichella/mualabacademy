@@ -6,7 +6,19 @@ export default function About() {
     <div className="w-screen">
 
       <div className="w-full p-10 flex items-center justify-center">
-        Work in progress.
+        School section
+      </div>
+
+      <hr />
+
+      <div className="w-full p-10 flex items-center justify-center">
+        Teachers list
+      </div>
+
+      <hr />
+
+      <div className="w-full p-10 flex items-center justify-center">
+        Students list
       </div>
 
       {/* <div id="school">

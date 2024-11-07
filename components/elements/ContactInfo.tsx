@@ -15,7 +15,7 @@ export default function ContactInfo() {
 
             <div className="w-[60%] max-sm:w-[90%] pt-12 pb-12">
 
-                <Title title={t("title")} altClass={" text-left max-sm:text-center "} />
+                <Title title={t("title")} altClass={"text-left max-sm:text-center text-[#93A996]"} />
 
                 <p className="max-sm:text-center">Via Giovanni Paisiello, 21 90145 Palermo PA <br />
                     ( +39 ) 088 389 3997</p>
