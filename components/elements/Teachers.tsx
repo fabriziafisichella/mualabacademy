@@ -2,13 +2,6 @@ import { useLocale } from "next-intl";
 import { useTranslations } from "next-intl";
 import { teachersEN, teachersIT } from "@/src/app/[locale]/utils/teacherList";
 import { TeachersCard } from "./TeachersCard";
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/ui/carousel"
 import { Title } from "../ui/Title";
 import { TextFade } from "../ui/texteffects/fade";
 
