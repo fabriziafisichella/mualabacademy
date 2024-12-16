@@ -1,12 +1,8 @@
 import { FootBar } from "@/components/elements/FootBar";
 import { HomeSchool } from "@/components/elements/HomeSchool";
-import { Title } from "@/components/ui/Title";
-import { useTranslations } from "next-intl";
 
 export default function Home() {
 
-
-  const t = useTranslations("Hero");
 
   return (
     <>
