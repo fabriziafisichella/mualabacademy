@@ -1,8 +1,14 @@
+import debImg from "../assets/images/teachers/deb.webp";
+import pinaImg from "../assets/images/teachers/pina.webp";
+import dariaImg from "../assets/images/teachers/daria.webp";
+import ilariaImg from "../assets/images/teachers/ilaria.webp";
+
 export const teachersIT = [
     {
         name: "Deborah Leonardi",
-        image: "https://images.pexels.com/photos/6923475/pexels-photo-6923475.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        role: "Director",
+        image: debImg,
+        role: "Fondatrice, Insegnante",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci?",
         socials: {
             instagram: true,
             instagramUrl: "https://www.instagram.com/mualabacademy/",
@@ -19,9 +25,10 @@ export const teachersIT = [
         }
     },
     {
-        name: "Salvatore Fisichella",
-        image: "https://images.pexels.com/photos/6923441/pexels-photo-6923441.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=10",
-        role: "Teacher",
+        name: "Pina Panina",
+        image: pinaImg,
+        role: "Insegnante",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci?",
         socials: {
             instagram: false,
             instagramUrl: "",
@@ -38,9 +45,10 @@ export const teachersIT = [
         }
     },
     {
-        name: "Fabrizia Fisichella",
-        image: "https://images.pexels.com/photos/6923373/pexels-photo-6923373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        role: "Teacher",
+        name: "Lampa Daria",
+        image: dariaImg,
+        role: "Insegnante",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci?",
         socials: {
             instagram: false,
             instagramUrl: "",
@@ -57,9 +65,10 @@ export const teachersIT = [
         }
     },
     {
-        name: "Narek Nazaretyan",
-        image: "https://images.pexels.com/photos/6923475/pexels-photo-6923475.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        role: "Director",
+        name: "Ilaria Condizionata",
+        image: ilariaImg,
+        role: "Insegnante",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci?",
         socials: {
             instagram: true,
             instagramUrl: "https://www.instagram.com/mualabacademy/",
@@ -74,52 +83,15 @@ export const teachersIT = [
             tiktok: true,
             tiktokUrl: "",
         }
-    },
-    {
-        name: "Laura Ferrara",
-        image: "https://images.pexels.com/photos/6923441/pexels-photo-6923441.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=10",
-        role: "Teacher",
-        socials: {
-            instagram: true,
-            instagramUrl: "",
-            twitter: false,
-            twitterUrl: "",
-            facebook: true,
-            facebookUrl: "",
-            linkedin: true,
-            linkedinUrl: "",
-            youtube: false,
-            youtubeUrl: "",
-            tiktok: false,
-            tiktokUrl: "",
-        }
-    },
-    {
-        name: "Ventimila Canuzzi",
-        image: "https://images.pexels.com/photos/6923373/pexels-photo-6923373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        role: "Teacher",
-        socials: {
-            instagram: false,
-            instagramUrl: "",
-            twitter: true,
-            twitterUrl: "",
-            facebook: true,
-            facebookUrl: "",
-            linkedin: false,
-            linkedinUrl: "",
-            youtube: true,
-            youtubeUrl: "",
-            tiktok: false,
-            tiktokUrl: "",
-        }
-    },
+    }
 ]
 
 export const teachersEN = [
     {
         name: "Deborah Leonardi",
-        image: "https://images.pexels.com/photos/6923475/pexels-photo-6923475.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        role: "Director",
+        image: debImg,
+        role: "Founder, Teacher",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci?",
         socials: {
             instagram: true,
             instagramUrl: "https://www.instagram.com/mualabacademy/",
@@ -136,9 +108,10 @@ export const teachersEN = [
         }
     },
     {
-        name: "Salvatore Fisichella",
-        image: "https://images.pexels.com/photos/6923441/pexels-photo-6923441.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        name: "Pina Panina",
+        image: pinaImg,
         role: "Teacher",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci?",
         socials: {
             instagram: false,
             instagramUrl: "",
@@ -155,9 +128,10 @@ export const teachersEN = [
         }
     },
     {
-        name: "Fabrizia Fisichella",
-        image: "https://images.pexels.com/photos/6923373/pexels-photo-6923373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        name: "Lampa Daria",
+        image: dariaImg,
         role: "Teacher",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci?",
         socials: {
             instagram: false,
             instagramUrl: "",
@@ -174,9 +148,10 @@ export const teachersEN = [
         }
     },
     {
-        name: "Narek Nazaretyan",
-        image: "https://images.pexels.com/photos/6923475/pexels-photo-6923475.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        role: "Director",
+        name: "Ilaria Condizionata",
+        image: ilariaImg,
+        role: "Teacher",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus enim doloribus facere magnam nisi adipisci?",
         socials: {
             instagram: true,
             instagramUrl: "https://www.instagram.com/mualabacademy/",
@@ -191,43 +166,5 @@ export const teachersEN = [
             tiktok: true,
             tiktokUrl: "",
         }
-    },
-    {
-        name: "Laura Ferrara",
-        image: "https://images.pexels.com/photos/6923441/pexels-photo-6923441.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        role: "Teacher",
-        socials: {
-            instagram: false,
-            instagramUrl: "",
-            twitter: true,
-            twitterUrl: "",
-            facebook: false,
-            facebookUrl: "",
-            linkedin: true,
-            linkedinUrl: "",
-            youtube: false,
-            youtubeUrl: "",
-            tiktok: true,
-            tiktokUrl: "",
-        }
-    },
-    {
-        name: "Ventimila Canuzzi",
-        image: "https://images.pexels.com/photos/6923373/pexels-photo-6923373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        role: "Teacher",
-        socials: {
-            instagram: false,
-            instagramUrl: "",
-            twitter: true,
-            twitterUrl: "",
-            facebook: true,
-            facebookUrl: "",
-            linkedin: false,
-            linkedinUrl: "",
-            youtube: true,
-            youtubeUrl: "",
-            tiktok: false,
-            tiktokUrl: "",
-        }
-    },
+    }
 ]

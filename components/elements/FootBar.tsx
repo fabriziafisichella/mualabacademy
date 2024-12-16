@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../src/app/[locale]/assets/images/logo.png";
+import logo from "../../src/app/[locale]/assets/images/logo.webp";
 import { useTranslations } from "next-intl";
 import { NavBarEN, NavBarIT } from "@/src/app/[locale]/utils/navbarList";
 import { useLocale } from "next-intl";

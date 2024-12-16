@@ -1,19 +1,33 @@
 import { FootBar } from "@/components/elements/FootBar";
+import { School } from "@/components/elements/School";
+import { TextFade } from "@/components/ui/texteffects/fade";
+import Image from "next/image";
+import schoolBanner from "../../assets/images/schoolBanner.webp";
+import { Teachers } from "@/components/elements/Teachers";
 
 
 export default function About() {
   return (
     <div className="w-screen">
 
-      <div className="w-full p-10 flex items-center justify-center">
-        School section
+      <TextFade direction="down">
+        <School />
+      </TextFade>
+
+      <div className="w-full shadow-2xl mt-5" style={{ height: "200px" }}>
+        <div className="relative w-full h-full overflow-hidden">
+          <Image
+            src={schoolBanner.src}
+            alt="Courses breakpoint"
+            fill
+            style={{ objectFit: "cover", objectPosition: "center" }}
+          />
+        </div>
       </div>
 
-      <hr />
-
-      <div className="w-full p-10 flex items-center justify-center">
-        Teachers list
-      </div>
+      <TextFade direction="down">
+        <Teachers />
+      </TextFade>
 
       <hr />
 
@@ -21,13 +35,7 @@ export default function About() {
         Students list
       </div>
 
-      {/* <div id="school">
-        <TextFade direction="down">
-          <School />
-        </TextFade>
-      </div>
-
-      <div id="team">
+      {/* <div id="team">
         <Teachers />
       </div> */}
 

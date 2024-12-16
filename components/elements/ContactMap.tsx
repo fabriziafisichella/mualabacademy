@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import contactsImg from "../../src/app/[locale]/assets/images/contacts.jpg"
+import contactsImg from "../../src/app/[locale]/assets/images/contactsBanner.webp";
 
 
 export function ContactMap() {
@@ -20,7 +20,7 @@ export function ContactMap() {
                 <div className="w-[50%] h-full max-sm:h-[50%] max-sm:w-[100%]"></div>
                 <Image src={contactsImg}
                     className="w-[50%] h-full max-sm:h-[50%] max-sm:w-[100%] shadow-2xl"
-                    alt={"Contacts background image"} style={{ objectFit: "cover", objectPosition: "center" }}  />
+                    alt={"Contacts background image"} quality={1} style={{ objectFit: "cover", objectPosition: "center" }}  />
             </div>
 
         </div>

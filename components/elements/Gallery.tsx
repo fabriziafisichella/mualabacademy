@@ -70,7 +70,7 @@ export const GalleryComponent: React.FC<GalleryPrompts> = ({ title, description 
         <div className="w-screen h-full p-8 flex flex-col gap-8 justify-center items-center bg-white">
 
             <TextFade direction="down">
-                <Title title={title} description={description} />
+                <Title title={title} description={description} altClassDescription="text-center" />
             </TextFade>
 
 

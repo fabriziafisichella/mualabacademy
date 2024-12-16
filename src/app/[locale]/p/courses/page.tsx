@@ -4,7 +4,7 @@ import { useLocale } from "next-intl";
 import { FootBar } from "@/components/elements/FootBar";
 import { Course } from "@/components/elements/Course";
 import Image from "next/image";
-import courseImg from "../../assets/images/course1.jpg";
+import courseImg from "../../assets/images/coursesBanner.webp";
 import { MasterCard } from "@/components/elements/MasterCard";
 
 export default function Courses() {

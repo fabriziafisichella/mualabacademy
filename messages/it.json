@@ -1,17 +1,27 @@
 {
   "Hero": {
-    "academy": "Accademia di Make-Up",
-    "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
-    "button1": "Corsi",
-    "button2": "Masterclass",
-    "reviews": "Dicono di noi",
-    "reviewsDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt!"
+    "academy": "Il nostro Kit per la tua Educazione",
+    "description": "Ti aiutiamo a sviluppare le tue passioni.",
+    "title1": "Corsi",
+    "desc1": "Lorem ipsum sit amet consectetur adipisicing elit.",
+    "title2": "Masterclass",
+    "desc2": "Lorem ipsum sit amet consectetur adipisicing elit.",
+    "title3": "Stage",
+    "desc3": "Lorem ipsum sit amet consectetur adipisicing elit.",
+    "aboutSchool": "Sulla nostra Scuola",
+    "aboutDescription": "Lorem ipsum sit amet consectetur adipisicing el..."
   },
   "About": {
-    "school": "La scuola",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt!",
-    "teachers": "I docenti",
-    "teachersDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt!"
+    "school": "La nostra Scuola, il tuo Successo",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. \nCorrupti consequuntur nobis aut totam incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt! \nLorem ipsum dolor sit amet consectetur adipisicing elit. \nCorrupti consequuntur nobis aut totam incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt! \nLorem ipsum dolor sit amet consectetur adipisicing elit. \nCorrupti consequuntur nobis aut totam incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt! \nLorem ipsum dolor sit amet consectetur adipisicing elit. \nCorrupti consequuntur nobis aut totam incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nobis aut totam incidunt! \n",
+    "title1": "Professionalità",
+    "desc1": "Lorem ipsum sit amet consectetur adipisicing elit.",
+    "title2": "Creatività",
+    "desc2": "Lorem ipsum sit amet consectetur adipisicing elit.",
+    "title3": "Opportunità",
+    "desc3": "Lorem ipsum sit amet consectetur adipisicing elit.",
+    "teachers": "Le docenti",
+    "teachersDescription": "Qualificate, fantastici membri dello staff."
   },
   "Courses": {
     "starting": "Inizio:",
