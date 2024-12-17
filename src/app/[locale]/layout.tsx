@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import { NextIntlClientProvider } from "next-intl"; 
 import "./globals.css";
 import Header from "@/components/elements/Header";
+import messagesEN from "../../../messages/en.json";
+import messagesIT from "../../../messages/it.json";
 
 
 const geistSans = localFont({
@@ -29,7 +31,7 @@ export default function RootLayout({
   params: { locale: string }; 
 }>) {
   const locale = params.locale || "it";  
-  const messages = require(`../../../messages/${locale}.json`);
+  const messages = locale === "it" ? messagesIT : messagesEN;
 
   return (
     <html lang={locale}>
