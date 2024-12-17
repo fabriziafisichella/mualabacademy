@@ -1,4 +1,5 @@
 import { FootBar } from "@/components/elements/FootBar";
+import { HomeCourses } from "@/components/elements/HomeCourses";
 import { HomeSchool } from "@/components/elements/HomeSchool";
 
 export default function Home() {
@@ -10,11 +11,7 @@ export default function Home() {
 
         <HomeSchool />
 
-        <hr />
-
-        <div className="w-full p-10 flex items-center justify-center">
-          Courses / masterclass / events intro
-        </div>
+        <HomeCourses />
 
         <hr />
 

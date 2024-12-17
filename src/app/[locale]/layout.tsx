@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { NextIntlClientProvider } from "next-intl"; 
 import "./globals.css";
 import Header from "@/components/elements/Header";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -21,18 +23,23 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string }; 
 }>) {
+  const locale = params.locale || "it";  
+  const messages = require(`../../../messages/${locale}.json`);
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        <main>
-          {children}
-        </main>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Header />
+          <main>{children}</main>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

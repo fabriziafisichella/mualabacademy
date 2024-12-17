@@ -126,7 +126,7 @@ export function TeachersCard({ details, isReversed }: CardProps) {
             </div>
 
             <div className="sm:w-[250px] sm:h-[400px] max-sm:w-full max-sm:h-[300px] relative max-sm:mb-[-30px] rounded overflow-hidden" >
-                <Image src={details.image} alt="Profile image" fill className="object-cover sm:object-center max-sm:object-[0_0]" />
+                <Image src={details.image} alt="Profile image" quality={100} fill className="object-cover sm:object-center max-sm:object-[0_0]" />
             </div>
 
         </li >

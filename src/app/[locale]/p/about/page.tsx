@@ -14,12 +14,13 @@ export default function About() {
         <School />
       </TextFade>
 
-      <div className="w-full shadow-2xl mt-5" style={{ height: "200px" }}>
+      <div className="w-full shadow-2xl mt-8" style={{ height: "200px" }}>
         <div className="relative w-full h-full overflow-hidden">
           <Image
             src={schoolBanner.src}
             alt="Courses breakpoint"
             fill
+            quality={100}
             style={{ objectFit: "cover", objectPosition: "center" }}
           />
         </div>

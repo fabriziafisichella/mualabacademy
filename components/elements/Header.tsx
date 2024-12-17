@@ -81,7 +81,7 @@ export default function Header() {
                         fill={true}
                         priority={true}
                         placeholder="blur"
-                        quality={0}
+                        quality={100}
                         style={{ objectPosition: "center", objectFit: "cover" }}
                     />
                 </div>

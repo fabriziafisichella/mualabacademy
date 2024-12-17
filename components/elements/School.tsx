@@ -12,7 +12,7 @@ export function School() {
 
     return (
 
-        <div className="w-screen relative drop-shadow-2xl flex justify-center">
+        <div className="w-screen pt-[50px] relative drop-shadow-2xl flex justify-center">
 
             <div className="w-[75%] max-sm:w-[90%] p-8">
                 <TextFade direction="up" delay="0.5">

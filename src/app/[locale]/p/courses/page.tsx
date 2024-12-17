@@ -1,4 +1,6 @@
+"use client";
 
+import { useEffect } from "react";
 import { CoursesEN, CoursesIT } from "../../utils/coursesList";
 import { useLocale } from "next-intl";
 import { FootBar } from "@/components/elements/FootBar";
@@ -12,9 +14,20 @@ export default function Courses() {
   const locale = useLocale();
   const list = (locale === "it" ? CoursesIT : CoursesEN);
 
-  return (
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (typeof window !== "undefined" && window.location.hash) {
+        const element = document.getElementById(window.location.hash.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }, 100);
+    return () => clearTimeout(timeout);
+  }, []);
 
-    <div className="w-screen">
+  return (
+    <div className="w-screen" id="courses">
 
       {list.map((course, index) =>
         <div key={index}>
@@ -33,19 +46,11 @@ export default function Courses() {
         </div>
       </div>
 
-      
-      <div className="w-full p-10 flex items-center justify-center">
+      <div className="w-full p-10 flex items-center justify-center" id="masterclass">
         <MasterCard />
       </div>
 
-      {/* <div className="w-full p-10 flex items-center justify-center">
-        Events list
-      </div> */}
-
-
-
       <FootBar />
-
     </div>
   );
 }

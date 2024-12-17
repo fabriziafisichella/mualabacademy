@@ -13,7 +13,7 @@ export function Teachers() {
 
     return (
 
-        <div className="w-screen relative flex flex-col items-center mt-10">
+        <div className="w-screen pt-[50px] relative flex flex-col items-center mt-10">
             <TextFade direction="down">
                 <Title title={t("teachers")} altClassDescription="max-sm:text-center" description={t("teachersDescription")} />
             </TextFade>
